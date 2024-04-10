@@ -1,5 +1,3 @@
-# Scale-BEV
-
 <div align="center">   
   
 # Scaling Multi-Camera 3D Object Detection through Weak-to-Strong Eliciting
