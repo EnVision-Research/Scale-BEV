@@ -4,7 +4,7 @@
 </div>
 
 <h3 align="center">
-  <a href="https://arxiv.org/abs/">arXiv</a> |
+  <a href="https://arxiv.org/abs/2404.06700">arXiv</a> |
   Demo[comming soon] |
   Code[comming soon]
 </h3>
@@ -25,7 +25,7 @@
 
 ## News <a name="news"></a>
  
-- **`2024/04/02`** Scale-BEV [paper](https://arxiv.org/abs/) is available on arXiv.
+- **`2024/04/02`** Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is available on arXiv.
 
 
 ## TODO List <a name="todos"></a>
@@ -47,7 +47,7 @@ Please consider citing our paper if the project helps your research with the fol
 @inproceedings{yu2024_univ2x,
  title={Scaling Multi-Camera 3D Object Detection through Weak-to-Strong Eliciting}, 
  author={Hao LU, Jiaqi TANG, Xinli XU, Xu CAO, Yunpeng ZHANG, Guoqing WANG, Dalong DU, Hao CHEN, Yingcong CHEN},
- booktitle={https://arxiv.org/abs/},
+ booktitle={https://arxiv.org/abs/2404.06700},
  year={2024},
 }
 ```
