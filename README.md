@@ -44,7 +44,7 @@ All assets and code are under the [Apache 2.0 license](./LICENSE) unless specifi
 Please consider citing our paper if the project helps your research with the following BibTex:
 
 ```bibtex
-@inproceedings{yu2024_univ2x,
+@inproceedings{scale-bev,
  title={Scaling Multi-Camera 3D Object Detection through Weak-to-Strong Eliciting}, 
  author={Hao LU, Jiaqi TANG, Xinli XU, Xu CAO, Yunpeng ZHANG, Guoqing WANG, Dalong DU, Hao CHEN, Yingcong CHEN},
  booktitle={https://arxiv.org/abs/2404.06700},
