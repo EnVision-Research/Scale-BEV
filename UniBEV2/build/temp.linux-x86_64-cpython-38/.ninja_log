@@ -1,0 +1,12 @@
+# ninja log v5
+3	3627	1697015403000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool_cuda.o	b94a59110502850f
+3	32362	1697015432000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	41d6fd09b2a861ab
+2626	4797	1697017233000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool_cuda.o	ef1035d16b8802e5
+2626	32243	1697017260000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	a5a7efe26f8b8ff2
+2283	4684	1697020118000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool_cuda.o	b94a59110502850f
+2283	28776	1697020143000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	41d6fd09b2a861ab
+281	62129	1702111466000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	9a837039fee6c7e3
+16303	73913	1702111467000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	9a837039fee6c7e3
+91	58861	1702115619000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	9a837039fee6c7e3
+15341	79800	1702453526000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	adf054838e073488
+4205	33466	1702525512000000000	/mnt/cfs/algorithm/hao.lu/Code/UniBEV/build/temp.linux-x86_64-cpython-38/mmdet3d/ops/bev_pool_v2/src/bev_pool.o	41d6fd09b2a861ab
