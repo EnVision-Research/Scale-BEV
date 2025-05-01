@@ -3,36 +3,13 @@
 # Scaling Multi-Camera 3D Object Detection through Weak-to-Strong Eliciting
 </div>
 
-<h3 align="center">
-  <a href="https://arxiv.org/abs/2404.06700">arXiv</a> |
-  Demo [coming soon] |
-  Code [coming soon]
-</h3>
-
-![teaser](assets/.png)
 
 <br><br>
 
-## Table of Contents:
-1. [Highlights](#high)
-2. [News](#news)
-3. [Dataset Processing](#dataset-processing)
-4. [How to Run](#how-to-run)
-5. [TODO List](#todos)
-6. [License](#license)
-7. [Citation](#citation)
-
 ---
-
-## Highlights <a name="high"></a>
-
-- Scale BEV.
-
----
-
 ## News <a name="news"></a>
 
-- **`2024/04/02`** Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is available on arXiv.
+- **`2024/04/10`** Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is available on arXiv.
 
 ---
 
