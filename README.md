@@ -1,5 +1,3 @@
-以下是改进后的英文版 `README.md`，排版美化且用语优化：
-
 ---
 
 <div align="center">   
@@ -15,6 +13,15 @@
 - **`2024/04/10`**: The Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is now available on arXiv.
 
 ---
+
+## Prepare the environment refer to [BEVDet](https://github.com/HuangJunJie2017/BEVDet).**
+
+```shell script
+git clone [https://github.com/EnVision-Research/Generalizable-BEV](https://github.com/EnVision-Research/Scale-BEV).git
+cd UniBEV2
+pip install -v -e .
+```
+
 
 ## Dataset Processing <a name="dataset-processing"></a>
 
