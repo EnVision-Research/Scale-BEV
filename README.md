@@ -12,7 +12,7 @@
 - **`2024/04/10`**: The Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is now available on arXiv.
 
 
-## Prepare the environment refer to [BEVDet](https://github.com/HuangJunJie2017/BEVDet).**
+## Prepare the environment 
 
 ```shell script
 git clone https://github.com/EnVision-Research/Scale-BEV.git
