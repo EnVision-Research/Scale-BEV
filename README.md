@@ -1,92 +1,88 @@
+以下是改进后的英文版 `README.md`，排版美化且用语优化：
+
+---
+
 <div align="center">   
   
 # Scaling Multi-Camera 3D Object Detection through Weak-to-Strong Eliciting
 </div>
 
-
-<br><br>
+<br>
 
 ---
+
 ## News <a name="news"></a>
-- **`2024/04/10`** Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is available on arXiv.
+- **`2024/04/10`**: The Scale-BEV [paper](https://arxiv.org/abs/2404.06700) is now available on arXiv.
+
 ---
 
 ## Dataset Processing <a name="dataset-processing"></a>
 
-我们提供了以下脚本，用于处理不同数据集。所有脚本位于 `UniBEV2/tools` 目录中：
+We provide the following scripts to process different datasets, all located under the `UniBEV2/tools` directory:
 
-- **Lyft 数据集**: 使用 `python UniBEV_lyft.py` 处理。
-- **NuScenes 数据集**: 使用 `python UniBEV_nus.py` 处理。
-- **DeepAccident 数据集**: 使用 `python Uni_DeepAccident.py` 处理。
-- **Waymo 数据集**: 
-  - **训练数据**: 使用 `python waymo_train_pkl.py` 处理。
-  - **验证数据**: 使用 `python waymo_val_pkl.py` 处理。
+- **Lyft dataset**: Processed with `python UniBEV_lyft.py`.
+- **NuScenes dataset**: Processed with `python UniBEV_nus.py`.
+- **DeepAccident dataset**: Processed with `python Uni_DeepAccident.py`.
+- **Waymo dataset**: 
+  - **Training data**: Processed with `python waymo_train_pkl.py`.
+  - **Validation data**: Processed with `python waymo_val_pkl.py`.
 
-请根据不同的数据集选择相应的脚本运行。
+Choose the appropriate script to process your dataset as needed.
 
 ---
 
 ## How to Run <a name="how-to-run"></a>
 
-运行训练代码的命令格式如下：
+To train a model, you can use the following command:
 
 ```bash
-bash tools/dist_train.sh $config.py$ $GPU数量$
+bash tools/dist_train.sh $config_file$ $num_gpus$
 ```
 
-### 示例
-运行配置文件 `./configs/FB-BEV/fb-r50-cbgs-pc-nus.py`，并指定 GPU 数量为 8 的命令如下：
+### Example:
+To run the configuration file `./configs/FB-BEV/fb-r50-cbgs-pc-nus.py` with 8 GPUs:
 
 ```bash
 bash tools/dist_train.sh ./configs/FB-BEV/fb-r50-cbgs-pc-nus.py 8
 ```
-配置文件说明
-
-3个真实数据集（Waymo，nus， Lyft）联合训练
-| **方法名称**      | **对应配置文件**                          | **描述**                     |
-|-------------------|------------------------------------------|-----------------------------|
-| **DETR**         | `UniBEV2/configs/Uni_BEV_v2/detr-r50-uni_v2.py`                    | DETR 方法通用版本配置。         |
-| **PETR**          | `UniBEV2/configs/Uni_BEV_v2/petr-r50-uni_v2.py`                    | PETR 方法通用版本配置。        |
-| **BEVDet**        | `UniBEV2/configs/Uni_BEV_v2/bevdet-r50-uni_v2.py`                  | BEVDet 方法通用版本配置。        |
-| **BEVDepth**      | `UniBEV2/configs/Uni_BEV_v2/bevdepth-r50-uni_v2.py`                | BEVDepth 方法，用于 R50 数据。    |
-| **BEVFormer**     | `UniBEV2/configs/Uni_BEV_v2/bevformer-r50-uni_v2.py`               | BEVFormer 方法，用于 R50 数据。   |
-| **FB-BEV**         `UniBEV2/configs/Uni_BEV_v2/fb-r50-uni_v2.py`                      | FB-BEV 方法通用版本配置。          |
-| **PCBEV**         | `UniBEV2/configs/Uni_BEV_v2/pdbev-r50-uni_v2.py`                   | PCBEV 方法主版本配置。          |
-|  **Scale-BEV**     | `UniBEV2/configs/Uni_BEV_v2/pdbev-samv2-aug-p9-r50-uni_v2.py`      | Scale-BEV 方法增强版本配置。      |
-
-真实和虚拟数据集（nus， DeepAccident）联合训练
-
-| **方法名称**      | **对应配置文件**                          | **描述**                     |
-|-------------------|------------------------------------------|-----------------------------|
-| **DETR**       | `UniBEV2/configs/Uni_RealSim_v2/detr-r50-realsim_v2.py`                | DETR 方法，用于 RealSim 数据集。 |
-| **PETR**          | `UniBEV2/configs/Uni_RealSim_v2/petr-r50-realsim-v2.py`                | PETR 方法，用于 RealSim 数据集。 |
-| **BEVDet**        | `UniBEV2/configs/Uni_RealSim_v2/bevdet-r50-realsim-v2.py`              | BEVDet 方法，用于 RealSim 数据集。 |
-| **BEVDepth**      | `UniBEV2/configs/Uni_RealSim_v2/bevdepth-r50-realsim-v2.py`            | BEVDepth 方法，用于 RealSim 数据集。 |
-| **BEVFormer**     | `UniBEV2/configs/Uni_RealSim_v2/bevformer-r50-realsim_v2.py`           | BEVFormer 方法，用于 RealSim 数据集。 |
-| **FB-BEV**                   | `UniBEV2/configs/Uni_RealSim_v2/fb-bevformer-r50-realsim-v2.py`        | FB-BEV 方法，用于 RealSim 数据集。 |
-| **PCBEV**         | `UniBEV2/configs/Uni_RealSim_v2/pdbev-r50-realsim-v2.py`               | PCBEV 方法主版本配置，用于 RealSim 数据集。 |
-| **Scale-BEV**                   | `UniBEV2/configs/Uni_RealSim_v2/pdbev-samv2-aug-r50-realsim-v2.py`     | Scale-BEV 方法 SAM V2 增强版本，用于 RealSim 数据集。 |
 
 ---
 
-### 说明：
-1. **方法名称**：列出了配置文件对应的模型方法（如 PETR、BEVDet 等）。
-2. **对应配置文件**：列出了每个模型方法对应的具体配置文件名称。
-3. **描述**：简要说明了配置文件的用途或模型版本的特点。
-4. 文件路径默认为 `UniBEV2/configs/Uni_BEV_v2/`，表格中只列出了文件名。
+## Configuration Overview
 
-将以上表格与之前的表格合并后，可以更清晰地展示所有方法及其配置文件。如果需要进一步修改或补充，请告诉我！
+### Unified Training with Three Real-World Datasets (Waymo, NuScenes, Lyft)
+
+| **Model**         | **Configuration File**                             | **Description**                                       |
+|-------------------|---------------------------------------------------|-----------------------------------------------------|
+| **DETR**          | `UniBEV2/configs/Uni_BEV_v2/detr-r50-uni_v2.py`    | Standard DETR configuration for multi-dataset training. |
+| **PETR**          | `UniBEV2/configs/Uni_BEV_v2/petr-r50-uni_v2.py`    | Standard PETR configuration for multi-dataset training. |
+| **BEVDet**        | `UniBEV2/configs/Uni_BEV_v2/bevdet-r50-uni_v2.py`  | Standard BEVDet configuration for multi-dataset training. |
+| **BEVDepth**      | `UniBEV2/configs/Uni_BEV_v2/bevdepth-r50-uni_v2.py`| BEVDepth configuration for ResNet-50.               |
+| **BEVFormer**     | `UniBEV2/configs/Uni_BEV_v2/bevformer-r50-uni_v2.py`| BEVFormer configuration for ResNet-50.             |
+| **FB-BEV**        | `UniBEV2/configs/Uni_BEV_v2/fb-r50-uni_v2.py`      | FB-BEV standard configuration.                     |
+| **PCBEV**         | `UniBEV2/configs/Uni_BEV_v2/pdbev-r50-uni_v2.py`   | Main PCBEV configuration.                          |
+| **Scale-BEV**     | `UniBEV2/configs/Uni_BEV_v2/pdbev-samv2-aug-p9-r50-uni_v2.py`| Enhanced Scale-BEV configuration. |
 
 ---
 
-### 说明：
-1. **方法名称**：对应的是你提到的模型方法（如 PETR、BEVDet 等）。
-2. **对应配置文件**：列出了每个模型方法对应的配置文件的具体名称。
-3. **描述**：简要说明了配置文件的用途或模型版本的特点。
+### Unified Training with Real and Simulated Datasets (NuScenes, DeepAccident)
+
+| **Model**         | **Configuration File**                                       | **Description**                                       |
+|-------------------|-------------------------------------------------------------|-----------------------------------------------------|
+| **DETR**          | `UniBEV2/configs/Uni_RealSim_v2/detr-r50-realsim_v2.py`      | DETR configuration for RealSim training.            |
+| **PETR**          | `UniBEV2/configs/Uni_RealSim_v2/petr-r50-realsim-v2.py`      | PETR configuration for RealSim training.            |
+| **BEVDet**        | `UniBEV2/configs/Uni_RealSim_v2/bevdet-r50-realsim-v2.py`    | BEVDet configuration for RealSim training.          |
+| **BEVDepth**      | `UniBEV2/configs/Uni_RealSim_v2/bevdepth-r50-realsim-v2.py`  | BEVDepth configuration for RealSim training.        |
+| **BEVFormer**     | `UniBEV2/configs/Uni_RealSim_v2/bevformer-r50-realsim_v2.py` | BEVFormer configuration for RealSim training.       |
+| **FB-BEV**        | `UniBEV2/configs/Uni_RealSim_v2/fb-bevformer-r50-realsim-v2.py`| FB-BEV configuration for RealSim training.         |
+| **PCBEV**         | `UniBEV2/configs/Uni_RealSim_v2/pdbev-r50-realsim-v2.py`     | Main PCBEV configuration for RealSim training.      |
+| **Scale-BEV**     | `UniBEV2/configs/Uni_RealSim_v2/pdbev-samv2-aug-r50-realsim-v2.py`| Enhanced Scale-BEV configuration with SAM V2 for RealSim training. |
+
+---
 
 ## Citation <a name="citation"></a>
 
-Please consider citing our paper if the project helps your research with the following BibTex:
+If you find this project useful for your research, please consider citing our paper using the following BibTeX:
 
 ```bibtex
 @inproceedings{scale-bev,
@@ -97,3 +93,14 @@ Please consider citing our paper if the project helps your research with the fol
 }
 ```
 
+---
+
+## Notes
+
+1. **Model Names**: The table in this document lists all configuration files alongside their respective model methods (e.g., PETR, BEVDet, etc.).
+2. **Configuration Files**: The file paths provided are under `UniBEV2/configs/`, with subdirectories for `Uni_BEV_v2` and `Uni_RealSim_v2`.
+3. **Description**: Each row in the table includes a brief description of the configuration file's purpose or the model it corresponds to.
+
+---
+
+This updated version should look clean and professional for your project documentation! If you need further adjustments, feel free to ask.
